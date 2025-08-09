@@ -1,0 +1,408 @@
+body {
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80")
+              center/cover no-repeat fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+
+/* Navbar brand styling */
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: orange !important;
+}
+
+/* Navbar link styling */
+.navbar-dark .navbar-nav .nav-link {
+  position: relative;
+  padding: 8px 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffc107;
+}
+
+/* Underline animation */
+.navbar-dark .navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #ffc107;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active link */
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #ffc107;
+}
+
+.navbar-dark .navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+.portfolio-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+/* About Section Styling */
+#about {
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+  padding: 80px 0;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+#about h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: #ffc107;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+#about p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Profile Image Styling */
+#about img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ffc107;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+/* Skills Section Styling */
+#skills label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+#skills h2 {
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+#skills h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: #ffc107;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+#skills .progress {
+  height: 25px;
+  border-radius: 50px;
+  overflow: hidden;
+  background-color: #e9ecef;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#skills .progress-bar {
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 1s ease-in-out;
+}
+
+/* Hover effect for skill bars */
+.skill-item:hover .progress-bar {
+  filter: brightness(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+/* Portfolio Card Styling */
+#portfolio h2 {
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+#portfolio h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: #ffc107;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.portfolio-card {
+  background: #fff;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-card .icon i {
+  background: rgba(255, 193, 7, 0.1);
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.portfolio-card h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.portfolio-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+/* Contact Section - Glass + Orange Glow */
+.contact-section {
+  background: radial-gradient(circle at top left, #1a1a1a, #000000);
+  color: white;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated orange gradient background */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 90deg,
+    #ff8c00,
+    #ffffff,
+    #ffa500,
+    #ffdd99,
+    #ff8c00
+  );
+  animation: spinBG 10s linear infinite;
+  opacity: 0.12;
+  z-index: 0;
+}
+@keyframes spinBG {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Heading Styling */
+.contact-section h2 {
+  position: relative;
+  z-index: 1;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  color: #ffa500;
+}
+
+/* Social Links Container */
+.social-links {
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+/* Glassmorphism + Orange Neon Border */
+.social-icon {
+  position: relative;
+  font-size: 2rem;
+  padding: 15px 25px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid transparent;
+  color: #ffa500; /* Fixed Orange Color */
+  transition: 0.4s ease;
+  overflow: hidden;
+}
+
+/* Animated orange-gold border */
+.social-icon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 12px;
+  background: linear-gradient(
+    45deg,
+    #ff8c00,
+    #ffa500,
+    #ffdd99,
+    #ffffff,
+    #ffa500
+  );
+  background-size: 300% 300%;
+  animation: neonBorder 4s linear infinite;
+  z-index: -1;
+}
+@keyframes neonBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Hover Effects */
+.social-icon:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 165, 0, 0.4);
+  color: #ffffff; /* On hover, icon turns white */
+}
+.modern-footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 40px 20px 20px;
+  text-align: center;
+}
+/* Base styles (already in your code) remain unchanged */
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Small Devices - Phones */
+@media (max-width: 576px) {
+  /* Navbar brand font smaller */
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  /* Navbar links */
+  .navbar-dark .navbar-nav .nav-link {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  /* About section image smaller */
+  #about img {
+    width: 140px;
+    height: 140px;
+  }
+
+  /* Skills progress bars */
+  #skills .progress {
+    height: 20px;
+  }
+
+  /* Social icons - stack with spacing */
+  .social-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .social-icon {
+    font-size: 1.5rem;
+    padding: 12px 18px;
+  }
+
+  /* Footer text smaller */
+  .footer-copy {
+    font-size: 0.85rem;
+  }
+}
+
+/* Medium Devices - Tablets */
+@media (max-width: 768px) {
+  #about p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  #skills label {
+    font-size: 0.95rem;
+  }
+
+  .social-links {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .portfolio-card {
+    margin-bottom: 20px;
+  }
+}
+
+/* Large Devices - Laptops */
+@media (max-width: 992px) {
+  #about img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .contact-section h2 {
+    font-size: 2rem;
+  }
+
+  .portfolio-card p {
+    font-size: 0.9rem;
+  }
+}
+
+.footer-copy {
+  font-size: 1rem;
+  color: white;
+  margin-top: 15px;
+}
